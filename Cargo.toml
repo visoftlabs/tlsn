@@ -68,21 +68,21 @@ tlsn-sdk-core = { path = "crates/sdk-core" }
 tlsn-wasm = { path = "crates/wasm" }
 tlsn = { path = "crates/tlsn" }
 
-mpz-circuits = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-circuits-data = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-memory-core = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-common = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-core = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-vm-core = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-garble = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-garble-core = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-ole = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-ot = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-share-conversion = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-fields = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-zk = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
-mpz-hash = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141", default-features = false }
-mpz-ideal-vm = { git = "https://github.com/tlsnotary/mpz2", rev = "8f897838f4e24aff9da8e8b012e8ba35ae770141" }
+mpz-circuits = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-circuits-data = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-memory-core = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-common = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-core = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-vm-core = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-garble = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-garble-core = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-ole = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-ot = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-share-conversion = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-fields = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-zk = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
+mpz-hash = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney", default-features = false }
+mpz-ideal-vm = { git = "https://github.com/visoftlabs/mpz2", branch = "feat/paymoney" }
 
 futures-plex = { git = "https://github.com/tlsnotary/tlsn-utils", rev = "e2f31e6a30bc5d1641ed6407fb1a38a595e523ce" }
 rangeset = { version = "0.4" }
