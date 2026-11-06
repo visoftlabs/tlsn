@@ -7,6 +7,8 @@ use mpz_core::bitvec::BitVec;
 use mpz_hash::blake3::Blake3;
 #[cfg(feature = "hash-keccak256")]
 use mpz_hash::keccak256::Keccak256;
+#[cfg(feature = "hash-poseidon2-koalabear")]
+use mpz_hash::poseidon2_koalabear::Poseidon2KoalaBear;
 use mpz_hash::sha256::Sha256;
 use mpz_memory_core::{
     DecodeFutureTyped, MemoryExt, Vector,
@@ -217,6 +219,19 @@ fn hash_commit_inner(
                 hasher
                     .update(vm, &blinder)
                     .map_err(HashCommitError::hasher)?;
+                hasher.finalize(vm).map_err(HashCommitError::hasher)?
+            }
+            #[cfg(feature = "hash-poseidon2-koalabear")]
+            HashAlgId::POSEIDON2_KOALABEAR => {
+                let mut hasher = Poseidon2KoalaBear::default();
+                let refs = match direction {
+                    Direction::Sent => &refs.sent,
+                    Direction::Received => &refs.recv,
+                };
+                for range in idx.iter() {
+                    hasher.update(&refs.get(range).expect("plaintext refs are valid"));
+                }
+                hasher.update(&blinder);
                 hasher.finalize(vm).map_err(HashCommitError::hasher)?
             }
             alg => {

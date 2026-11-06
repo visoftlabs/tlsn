@@ -66,6 +66,9 @@ impl HashAlgId {
     pub const BLAKE3: Self = Self(2);
     /// Keccak-256 hash algorithm.
     pub const KECCAK256: Self = Self(3);
+    /// `tlsn/poseidon2/koalabear/16/v1`; see `mpz_hash::poseidon2_koalabear`. Callers register
+    /// the native implementation with [`HashProvider::set_algorithm`].
+    pub const POSEIDON2_KOALABEAR: Self = Self(128);
 
     /// Creates a new hash algorithm identifier.
     ///
